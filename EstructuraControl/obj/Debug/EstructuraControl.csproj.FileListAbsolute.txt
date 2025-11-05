@@ -1,0 +1,8 @@
+C:\Users\jeano\source\repos\.NET\EstructuraControl\bin\Debug\EstructuraControl.exe.config
+C:\Users\jeano\source\repos\.NET\EstructuraControl\bin\Debug\EstructuraControl.exe
+C:\Users\jeano\source\repos\.NET\EstructuraControl\bin\Debug\EstructuraControl.pdb
+C:\Users\jeano\source\repos\.NET\EstructuraControl\obj\Debug\EstructuraControl.csproj.AssemblyReference.cache
+C:\Users\jeano\source\repos\.NET\EstructuraControl\obj\Debug\EstructuraControl.csproj.CoreCompileInputs.cache
+C:\Users\jeano\source\repos\.NET\EstructuraControl\obj\Debug\EstructuraControl.exe
+C:\Users\jeano\source\repos\.NET\EstructuraControl\obj\Debug\EstructuraControl.pdb
+C:\Users\jeano\source\repos\.NET\EstructuraControl\obj\Debug\EstructuraControl.exe.config

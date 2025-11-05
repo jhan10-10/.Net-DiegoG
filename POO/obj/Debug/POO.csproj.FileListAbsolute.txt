@@ -1,0 +1,8 @@
+C:\Users\jeano\source\repos\.NET\POO\bin\Debug\POO.exe.config
+C:\Users\jeano\source\repos\.NET\POO\bin\Debug\POO.exe
+C:\Users\jeano\source\repos\.NET\POO\bin\Debug\POO.pdb
+C:\Users\jeano\source\repos\.NET\POO\obj\Debug\POO.csproj.AssemblyReference.cache
+C:\Users\jeano\source\repos\.NET\POO\obj\Debug\POO.csproj.CoreCompileInputs.cache
+C:\Users\jeano\source\repos\.NET\POO\obj\Debug\POO.exe
+C:\Users\jeano\source\repos\.NET\POO\obj\Debug\POO.pdb
+C:\Users\jeano\source\repos\.NET\POO\obj\Debug\POO.exe.config

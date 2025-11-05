@@ -1,0 +1,8 @@
+C:\Users\jeano\source\repos\.NET\Ejercicios_POO\bin\Debug\Ejercicios_POO.exe.config
+C:\Users\jeano\source\repos\.NET\Ejercicios_POO\bin\Debug\Ejercicios_POO.exe
+C:\Users\jeano\source\repos\.NET\Ejercicios_POO\bin\Debug\Ejercicios_POO.pdb
+C:\Users\jeano\source\repos\.NET\Ejercicios_POO\obj\Debug\Ejercicios_POO.csproj.AssemblyReference.cache
+C:\Users\jeano\source\repos\.NET\Ejercicios_POO\obj\Debug\Ejercicios_POO.csproj.CoreCompileInputs.cache
+C:\Users\jeano\source\repos\.NET\Ejercicios_POO\obj\Debug\Ejercicios_POO.exe
+C:\Users\jeano\source\repos\.NET\Ejercicios_POO\obj\Debug\Ejercicios_POO.pdb
+C:\Users\jeano\source\repos\.NET\Ejercicios_POO\obj\Debug\Ejercicios_POO.exe.config
