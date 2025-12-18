@@ -1,0 +1,56 @@
+﻿@model TostonApp.Ventas.Models.Usuario
+
+@{
+    ViewData["Title"] = "Nuevo Cliente";
+}
+
+<div class="main-content">
+    <h1>Registrar Nuevo Cliente</h1>
+
+    <form asp-action="Crear" method="post" style="max-width:800px;">
+        @Html.AntiForgeryToken()
+        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
+            <div>
+                <label class="form-label">Cédula *</label>
+                <input asp-for="Cedula" class="form-control" placeholder="Ej: 1234567890" required />
+                <span asp-validation-for="Cedula" class="text-danger"></span>
+            </div>
+
+            <div>
+                <label class="form-label">Correo Electrónico</label>
+                <input asp-for="Correo_Electronico" type="email" class="form-control"
+                       placeholder="ejemplo@correo.com" />
+                <span asp-validation-for="Correo_Electronico" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
+            <div>
+                <label class="form-label">Nombre *</label>
+                <input asp-for="Nombre" class="form-control" placeholder="Nombre del cliente" required />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+
+            <div>
+                <label class="form-label">Apellido *</label>
+                <input asp-for="Apellido" class="form-control" placeholder="Apellido del cliente" required />
+                <span asp-validation-for="Apellido" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div style="display:flex; gap:10px; margin-top:20px;">
+            <a asp-action="Index" class="btn-secondary">
+                <i class="fa-solid fa-arrow-left"></i> Volver
+            </a>
+            <button type="submit" class="btn-success">
+                <i class="fa-solid fa-save"></i> Guardar Cliente
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

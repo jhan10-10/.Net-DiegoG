@@ -1,0 +1,176 @@
+﻿<!-- ==================== ENTREGAS.CSHTML (Domicilios) ==================== -->
+@model IEnumerable<TostonApp.Ventas.Models.Domicilio>
+@{
+    ViewData["Title"] = "Gestión de Domicilios";
+}
+
+<div class="main-content">
+    <div class="page-header">
+        <h1>Gestión de Domicilios</h1>
+    </div>
+
+    <div class="search-section">
+        <div class="search-bar">
+            <label>Buscar entrega</label>
+            <input type="text" id="searchInput" placeholder="escribe aquí ........" />
+            <button class="btn-primary" onclick="buscarEntrega()">Buscar</button>
+        </div>
+
+        <div class="filters">
+            <label>Filtros ▽:</label>
+            <select id="filtroEstado" class="filter-select" onchange="filtrarTabla()">
+                <option value="">Estado ↓</option>
+                <option value="Pendiente">Pendiente</option>
+                <option value="En Camino">En Camino</option>
+                <option value="Entregado">Entregado</option>
+                <option value="Fallido">Fallido</option>
+            </select>
+            <input type="date" id="filtroFecha" class="filter-date" onchange="filtrarTabla()" />
+            <button class="btn-secondary" onclick="limpiarFiltros()">Limpiar Filtros ▽</button>
+        </div>
+    </div>
+
+    <div class="action-section">
+        <button class="btn-success" onclick="location.href='@Url.Action("Crear", "Domicilios")'">
+            <i class="fas fa-plus"></i> Programar Entrega
+        </button>
+    </div>
+
+    <div class="table-container">
+        <table class="data-table" id="tablaEntregas">
+            <thead>
+                <tr>
+                    <th>N° Entrega</th>
+                    <th>N° Venta</th>
+                    <th>Fecha</th>
+                    <th>Dirección</th>
+                    <th>Responsable</th>
+                    <th>Costo Envío</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Any())
+                {
+                    @foreach (var entrega in Model)
+                    {
+                        <tr data-estado="@entrega.Estado" data-fecha="@entrega.Fecha.ToString("yyyy-MM-dd")">
+                            <td>@entrega.ID_entrega.ToString("000000")</td>
+                            <td>@entrega.ID_venta.ToString("000000")</td>
+                            <td>@entrega.Fecha.ToString("dd/MM/yyyy")</td>
+                            <td>@entrega.Direccion</td>
+                            <td>@entrega.Responsable</td>
+                            <td>$@entrega.CostoEnvio.ToString("N2")</td>
+                            <td>
+                                <span class="badge badge-@ObtenerClaseEstado(entrega.Estado)">
+                                    @entrega.Estado
+                                </span>
+                            </td>
+                            <td class="action-buttons">
+                                <button class="btn-toggle" title="Cambiar estado" onclick="toggleActivo(@entrega.ID_entrega, @entrega.Activo.ToString().ToLower())">
+                                    <i class="fas fa-toggle-@(entrega.Activo ? "on" : "off")"></i>
+                                </button>
+                                <a href="@Url.Action("Detalles", "Domicilios", new { id = entrega.ID_entrega })" class="btn-view" title="Ver detalles">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="@Url.Action("Editar", "Domicilios", new { id = entrega.ID_entrega })" class="btn-edit" title="Editar">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a href="@Url.Action("Eliminar", "Domicilios", new { id = entrega.ID_entrega })" class="btn-delete" title="Eliminar">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="8" class="text-center">No hay entregas registradas</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@functions {
+    string ObtenerClaseEstado(string estado)
+    {
+        if (string.IsNullOrEmpty(estado)) return "secondary";
+
+        return estado switch
+        {
+            "Pendiente" => "warning",
+            "En Camino" => "info",
+            "Entregado" => "success",
+            "Fallido" => "danger",
+            _ => "secondary"
+        };
+    }
+}
+
+<script>
+    // Búsqueda de entrega
+    function buscarEntrega() {
+        const searchValue = document.getElementById('searchInput').value.toLowerCase();
+        const tabla = document.getElementById('tablaEntregas');
+        const filas = tabla.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+        filas.forEach(fila => {
+            if (fila.textContent.toLowerCase().includes(searchValue) || searchValue === '') {
+                fila.style.display = '';
+            } else {
+                fila.style.display = 'none';
+            }
+        });
+    }
+
+    // Filtrar por estado y fecha
+    function filtrarTabla() {
+        const estado = document.getElementById('filtroEstado').value;
+        const fecha = document.getElementById('filtroFecha').value;
+        const tabla = document.getElementById('tablaEntregas');
+        const filas = tabla.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+        filas.forEach(fila => {
+            const dataEstado = fila.getAttribute('data-estado');
+            const dataFecha = fila.getAttribute('data-fecha');
+
+            let mostrar = true;
+
+            if (estado && dataEstado !== estado) {
+                mostrar = false;
+            }
+
+            if (fecha && dataFecha !== fecha) {
+                mostrar = false;
+            }
+
+            fila.style.display = mostrar ? '' : 'none';
+        });
+    }
+
+    // Limpiar filtros
+    function limpiarFiltros() {
+        document.getElementById('filtroEstado').value = '';
+        document.getElementById('filtroFecha').value = '';
+        document.getElementById('searchInput').value = '';
+
+        const tabla = document.getElementById('tablaEntregas');
+        const filas = tabla.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+        filas.forEach(fila => {
+            fila.style.display = '';
+        });
+    }
+
+    // Toggle de estado activo/inactivo (opcional)
+    function toggleActivo(id, activo) {
+        console.log('Toggle para entrega ' + id + ' - Activo: ' + activo);
+        // Aquí puedes agregar lógica para cambiar el estado de activo
+    }
+
+    // Búsqueda en tiempo real
+    document.getElementById('searchInput').addEventListener('keyup', buscarEntrega);
+</script>

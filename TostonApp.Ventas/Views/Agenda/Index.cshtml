@@ -1,0 +1,225 @@
+﻿@model IEnumerable<TostonApp.Ventas.Models.Agenda>
+
+@{
+    ViewData["Title"] = "Gestión de Agenda";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-header">
+    <h1>Gestión de Agenda</h1>
+</div>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        <strong>¡Éxito!</strong> @TempData["Success"]
+    </div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">
+        <strong>Error:</strong> @TempData["Error"]
+    </div>
+}
+
+<div class="search-section">
+    <div class="search-bar">
+        <label>Buscar evento</label>
+        <input type="text" id="searchInput" placeholder="escribe aquí ........" />
+        <button class="btn-primary" onclick="buscar()">Buscar</button>
+    </div>
+
+    <div class="filters">
+        <label>Filtros ▽:</label>
+        <select id="filtroEstado" class="filter-select" onchange="filtrar()">
+            <option value="">Estado ↓</option>
+            <option value="Pendiente">Pendiente</option>
+            <option value="Completada">Completada</option>
+            <option value="Cancelada">Cancelada</option>
+        </select>
+        <input type="date" id="filtroFecha" class="filter-date" onchange="filtrar()" />
+        <button class="btn-secondary" onclick="limpiarFiltros()">Limpiar Filtros ▽</button>
+    </div>
+</div>
+
+<div class="action-section">
+    <button class="btn-success" onclick="location.href='@Url.Action("Create", "Agenda")'">
+        <i class="fas fa-plus"></i> Crear Evento
+    </button>
+</div>
+
+<div class="table-container">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Título</th>
+                <th>Descripción</th>
+                <th>Tipo</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tablaAgenda">
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var evento in Model)
+                {
+                    <tr data-fecha="@evento.Fecha.ToString("yyyy-MM-dd")">
+                        <td>@evento.Fecha.ToString("dd/MM/yyyy")</td>
+                        <td>@evento.Hora</td>
+                        <td>@evento.Titulo</td>
+                        <td>@evento.Descripcion</td>
+                        <td>@(evento.TipoEvento ?? "N/A")</td>
+                        <td>
+                            <span class="badge badge-@ObtenerClaseEstado(evento.Estado)">
+                                @evento.Estado
+                            </span>
+                        </td>
+                        <td class="action-buttons">
+                            <button class="btn-view"
+                                    onclick="window.location.href='@Url.Action("Details", "Agenda", new { id = evento.ID_agenda })'"
+                                    title="Ver detalle">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn-edit"
+                                    onclick="window.location.href='@Url.Action("Edit", "Agenda", new { id = evento.ID_agenda })'"
+                                    title="Editar">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn-delete"
+                                    onclick="window.location.href='@Url.Action("Delete", "Agenda", new { id = evento.ID_agenda })'"
+                                    title="Eliminar">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="7" class="text-center">No hay eventos registrados</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="pagination">
+    <button class="btn-pagination" onclick="cambiarPagina('prev')">←</button>
+    <span class="page-numbers">
+        <button class="page-btn active" onclick="irAPagina(1)">1</button>
+        <button class="page-btn" onclick="irAPagina(2)">2</button>
+        <button class="page-btn" onclick="irAPagina(3)">3</button>
+        <span>......</span>
+    </span>
+    <span class="page-info">Página 1</span>
+    <button class="btn-pagination" onclick="cambiarPagina('next')">→</button>
+</div>
+
+@section Scripts {
+    <script>
+        let paginaActual = 1;
+
+        function buscar() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toUpperCase();
+            const table = document.getElementById('tablaAgenda');
+            const rows = table.getElementsByTagName('tr');
+
+            for (let i = 0; i < rows.length; i++) {
+                const row = rows[i];
+                const text = row.textContent || row.innerText;
+
+                if (text.toUpperCase().indexOf(filter) > -1) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            }
+        }
+
+        function filtrar() {
+            const estadoFiltro = document.getElementById('filtroEstado').value;
+            const fechaFiltro = document.getElementById('filtroFecha').value;
+            const table = document.getElementById('tablaAgenda');
+            const rows = table.getElementsByTagName('tr');
+
+            for (let i = 0; i < rows.length; i++) {
+                const row = rows[i];
+                let mostrar = true;
+
+                if (estadoFiltro) {
+                    const estadoBadge = row.querySelector('.badge');
+                    if (estadoBadge && !estadoBadge.textContent.trim().includes(estadoFiltro)) {
+                        mostrar = false;
+                    }
+                }
+
+                if (fechaFiltro && mostrar) {
+                    const fechaRow = row.getAttribute('data-fecha');
+                    if (fechaRow && fechaRow !== fechaFiltro) {
+                        mostrar = false;
+                    }
+                }
+
+                row.style.display = mostrar ? '' : 'none';
+            }
+        }
+
+        function limpiarFiltros() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('filtroEstado').value = '';
+            document.getElementById('filtroFecha').value = '';
+
+            const table = document.getElementById('tablaAgenda');
+            const rows = table.getElementsByTagName('tr');
+            for (let i = 0; i < rows.length; i++) {
+                rows[i].style.display = '';
+            }
+        }
+
+        function cambiarPagina(direccion) {
+            if (direccion === 'prev' && paginaActual > 1) {
+                paginaActual--;
+            } else if (direccion === 'next') {
+                paginaActual++;
+            }
+            actualizarPaginacion();
+        }
+
+        function irAPagina(numero) {
+            paginaActual = numero;
+            actualizarPaginacion();
+        }
+
+        function actualizarPaginacion() {
+            document.querySelector('.page-info').textContent = `Página ${paginaActual}`;
+
+            const botones = document.querySelectorAll('.page-btn');
+            botones.forEach((btn, index) => {
+                btn.classList.toggle('active', (index + 1) === paginaActual);
+            });
+        }
+
+        document.getElementById('searchInput').addEventListener('keyup', buscar);
+    </script>
+}
+
+@functions {
+    string ObtenerClaseEstado(string estado)
+    {
+        if (string.IsNullOrEmpty(estado)) return "secondary";
+
+        return estado switch
+        {
+            "Pendiente" => "warning",
+            "Completada" => "success",
+            "Cancelada" => "danger",
+            _ => "secondary"
+        };
+    }
+}

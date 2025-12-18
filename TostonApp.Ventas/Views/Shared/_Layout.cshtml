@@ -1,0 +1,196 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="" rel="stylesheet" />
+    <link rel="icon" href="~/images/Imagen de WhatsApp 2025-12-01 a las 15.14.21_e98ce552.jpg" type="image/png">
+    <title>TostonApp</title>
+
+    <!-- Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <style>
+        /* === Ajustes especiales === */
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .hamburger-btn {
+            font-size: 1.8rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+            .hamburger-btn:hover {
+                color: var(--secondary-color);
+            }
+
+        /* Sidebar oculto */
+        .sidebar {
+            position: fixed;
+            left: -280px;
+            top: 80px;
+            height: calc(100vh - 80px);
+            transition: var(--transition);
+            z-index: 95;
+        }
+
+            /* Sidebar visible */
+            .sidebar.active {
+                left: 0;
+            }
+
+        /* Cuando sidebar está activo, mover contenido */
+        .content-wrapper.shifted {
+            margin-left: 280px;
+            transition: var(--transition);
+        }
+
+        .logo-container {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+
+        <!-- ===================== HEADER ===================== -->
+        <header class="header">
+            <div class="header-left">
+                <!-- Botón hamburguesa -->
+                <button id="menuToggle" class="hamburger-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="logo-container">
+                    <img src="~/images/Imagen de WhatsApp 2025-12-01 a las 15.14.21_e98ce552.jpg" alt="TostonApp" class="logo" />
+                </div>
+            </div>
+
+            <nav class="header-nav">
+                <a href="#">Inicio</a>
+                <a href="#">Ayuda</a>
+                <a href="#">Contacto</a>
+
+                <button class="user-btn">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+            </nav>
+        </header>
+
+        <!-- ===================== CONTENT WRAPPER ===================== -->
+        <div id="contentWrapper" class="content-wrapper">
+
+            <!-- ===================== SIDEBAR ===================== -->
+            <aside id="sidebar" class="sidebar">
+
+                <!-- CONFIGURACIÓN -->
+                <div class="sidebar-section">
+                    <h3>Configuración</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-bell"></i> Gestión de Notificaciones</a></li>
+                        <li><a href="#"><i class="fa-solid fa-id-card"></i> Roles</a></li>
+                    </ul>
+                </div>
+
+                <!-- USUARIOS -->
+                <div class="sidebar-section">
+                    <h3>Usuarios</h3>
+                    <ul>
+                        <li><a href="/Usuario"><i class="fa-solid fa-users"></i> Gestión de Clientes</a></li>
+                        <li><a href="#"><i class="fa-solid fa-key"></i> Gestión de Acceso</a></li>
+                    </ul>
+                </div>
+
+                <!-- COMPRAS -->
+                <div class="sidebar-section">
+                    <h3>Compras</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-tags"></i> Categoría de Insumos</a></li>
+                        <li><a href="#"><i class="fa-solid fa-box"></i> Gestión de Insumos</a></li>
+                        <li><a href="#"><i class="fa-solid fa-handshake"></i> Proveedores</a></li>
+                        <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> Compras</a></li>
+                    </ul>
+                </div>
+
+                <!-- PRODUCCIÓN -->
+                <div class="sidebar-section">
+                    <h3>Producción</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-layer-group"></i> Categoría de Productos</a></li>
+                        <li><a href="/Productos"><i class="fa-solid fa-burger"></i> Gestión de Productos</a></li>
+                        <li><a href="#"><i class="fa-solid fa-clipboard-list"></i> Ficha Técnica</a></li>
+                    </ul>
+                </div>
+
+                <!-- VENTAS -->
+                <div class="sidebar-section active">
+                    <h3>Ventas</h3>
+                    <ul>
+
+                        <li><a href="/Pedido"><i class="fa-solid fa-list"></i> Gestión de Pedido</a></li>
+                        <li><a href="/Venta"><i class="fa-solid fa-cash-register"></i> Gestión de Ventas</a></li>
+
+                        <li><a href="/Carrito"><i class="fa-solid fa-cart-plus"></i> Carrito de Compras</a></li>
+                    </ul>
+                </div>
+
+                <!-- DASHBOARD -->
+                <div class="sidebar-section">
+                    <h3>Dashboard</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-chart-line"></i> Medición y Desempeño</a></li>
+                    </ul>
+                </div>
+
+            </aside>
+
+            <!-- ===================== MAIN CONTENT ===================== -->
+            <main class="main-content">
+                @RenderBody()
+            </main>
+
+        </div>
+
+        <!-- ===================== FOOTER ===================== -->
+        <footer class="footer">
+            &copy; @DateTime.Now.Year — TostonApp
+        </footer>
+    </div>
+
+    <!-- ===================== SCRIPTS BASE ===================== -->
+    <!-- jQuery (necesario para validación) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Script para menú hamburguesa -->
+    <script>
+        const toggle = document.getElementById("menuToggle");
+        const sidebar = document.getElementById("sidebar");
+        const wrapper = document.getElementById("contentWrapper");
+
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("active");
+            wrapper.classList.toggle("shifted");
+        });
+    </script>
+
+    <!-- ===================== SECCIÓN SCRIPTS ADICIONALES ===================== -->
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

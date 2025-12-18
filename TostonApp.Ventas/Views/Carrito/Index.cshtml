@@ -1,0 +1,145 @@
+﻿@model IEnumerable<TostonApp.Ventas.Models.CarritoCompra>
+@{
+    ViewData["Title"] = "Carrito";
+    var total = Model?.Where(x => x.Activo).Sum(x => x.Subtotal) ?? 0m;
+}
+
+<div class="main-content">
+    <h1>Carrito de Compra</h1>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">@TempData["Success"]</div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+
+    <div style="display:flex; gap:10px; margin-bottom:16px;">
+        <a class="btn-success" href="@Url.Action("Crear", "Carrito")">+ Agregar Producto</a>
+        @if (Model != null && Model.Any())
+        {
+            <a class="btn-secondary" href="@Url.Action("Index", "Pedido")">Ver Pedidos</a>
+            <a class="btn-primary" href="@Url.Action("Index", "Usuario")">Ver Clientes</a>
+        }
+    </div>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Subtotal</th>
+                <th>Fecha</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.ID_Carrito</td>
+                        <td>@(item.Producto?.Nombre ?? ("Producto ID " + item.ID_Producto))</td>
+                        <td>$@item.PrecioUnitario.ToString("N2")</td>
+                        <td>@item.Cantidad</td>
+                        <td><strong>$@item.Subtotal.ToString("N2")</strong></td>
+                        <td>@item.FechaAgregado.ToString("dd/MM/yyyy HH:mm")</td>
+                        <td>
+                            <a class="btn-primary" href="@Url.Action("Editar", "Carrito", new { id = item.ID_Carrito })">Editar</a>
+                            <a class="btn-danger" href="@Url.Action("Eliminar", "Carrito", new { id = item.ID_Carrito })">Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr><td colspan="7">El carrito está vacío.</td></tr>
+            }
+        </tbody>
+    </table>
+
+    <div style="margin-top:16px; display:flex; justify-content:space-between; align-items:center;">
+        <h3>Total: $@total.ToString("N2")</h3>
+
+        @if (Model != null && Model.Any())
+        {
+            <form asp-controller="Pedido" asp-action="CrearDesdeCarrito" method="post"
+                  style="display:flex; gap:10px; align-items:end; flex-wrap:wrap;">
+                @Html.AntiForgeryToken()
+
+                <!-- Selector de Cliente -->
+                <div>
+                    <label style="display:block; font-weight:600;">Cliente (opcional)</label>
+                    <select name="idUsuario" id="selectCliente" class="form-control" style="min-width:200px;">
+                        <option value="">-- Sin cliente --</option>
+                        @if (ViewBag.Clientes != null)
+                        {
+                            @foreach (var cliente in ViewBag.Clientes as List<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem>)
+                            {
+                                <option value="@cliente.Value">@cliente.Text</option>
+                            }
+                        }
+                    </select>
+                </div>
+
+                <!-- Campo Cédula -->
+                <div id="divCedula">
+                    <label style="display:block; font-weight:600;">Cédula (opcional)</label>
+                    <input name="cedula" id="inputCedula" class="form-control" maxlength="100"
+                           placeholder="Solo si no hay cliente" />
+                </div>
+
+                <!-- Observaciones -->
+                <div>
+                    <label style="display:block; font-weight:600;">Observaciones (opcional)</label>
+                    <input name="observaciones" class="form-control" maxlength="500"
+                           placeholder="Notas adicionales" />
+                </div>
+
+                <!-- Botón Crear Pedido -->
+                <button type="submit" class="btn-success" style="height:fit-content; margin-top:24px;">
+                    Crear Pedido
+                </button>
+            </form>
+
+            <!-- Botón Registrar Cliente Rápido -->
+            <div style="margin-top:10px; width:100%;">
+                <a href="@Url.Action("Crear", "Usuario")" class="btn-secondary" style="font-size:0.9em;">
+                    + Registrar Nuevo Cliente
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Script para deshabilitar el campo de cédula cuando se selecciona un cliente
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectCliente = document.getElementById('selectCliente');
+            const inputCedula = document.getElementById('inputCedula');
+
+            if (selectCliente && inputCedula) {
+                selectCliente.addEventListener('change', function() {
+                    if (this.value) {
+                        // Si se selecciona un cliente, deshabilitar cédula manual
+                        inputCedula.value = '';
+                        inputCedula.disabled = true;
+                        inputCedula.placeholder = 'Cliente seleccionado';
+                        inputCedula.style.backgroundColor = '#f0f0f0';
+                    } else {
+                        // Si no hay cliente, habilitar cédula manual
+                        inputCedula.disabled = false;
+                        inputCedula.placeholder = 'Solo si no hay cliente';
+                        inputCedula.style.backgroundColor = '';
+                    }
+                });
+            }
+        });
+    </script>
+}

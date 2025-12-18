@@ -1,0 +1,1003 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\pedido\\creardesdecarrito.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\pedido\\creardesdecarrito.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\models\\pedidodetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:models\\pedidodetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\venta\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\venta\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\venta\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\venta\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\venta\\creardesdepedido.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\venta\\creardesdepedido.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\productos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\productos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\controllers\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:controllers\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\venta\\detalle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\venta\\detalle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\carrito\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\carrito\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\carrito\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\carrito\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\carrito\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\carrito\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\carrito\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\carrito\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\pedido\\detalle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\pedido\\detalle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\pedido\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\pedido\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\models\\tostondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:models\\tostondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\models\\carritocompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:models\\carritocompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\venta\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\venta\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\migrations\\20251216145801_inicial4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:migrations\\20251216145801_inicial4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\controllers\\devolucioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:controllers\\devolucioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\productos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\productos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\productos\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\productos\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\productos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\productos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\controllers\\domicilioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:controllers\\domicilioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\controllers\\agendacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:controllers\\agendacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\controllers\\cotizacionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:controllers\\cotizacionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\migrations\\20251216134534_inicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:migrations\\20251216134534_inicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\tostonapp.ventas.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:tostonapp.ventas.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\cotizacion\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\cotizacion\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\models\\domicilios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:models\\domicilios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\domicilios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\domicilios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\domicilios\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\domicilios\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\domicilios\\detalles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\domicilios\\detalles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\domicilios\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\domicilios\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\domicilios\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\domicilios\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\agenda\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\agenda\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\agenda\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\agenda\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\devoluciones\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\devoluciones\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\devoluciones\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\devoluciones\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\devoluciones\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\devoluciones\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\devoluciones\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\devoluciones\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\cotizacion\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\cotizacion\\eliminar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\cotizacion\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\cotizacion\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\cotizacion\\detalles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\cotizacion\\detalles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\cotizacion\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\cotizacion\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\views\\agenda\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:views\\agenda\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\migrations\\20251216154830_ventas_pedidodetalles_y_carrito_sinusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:migrations\\20251216154830_ventas_pedidodetalles_y_carrito_sinusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\migrations\\20251216151521_inicial5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:migrations\\20251216151521_inicial5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\migrations\\20251216141039_inicial3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:migrations\\20251216141039_inicial3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|c:\\users\\jeano\\source\\repos\\.net\\tostonapp.ventas\\migrations\\20251216135704_addpedidodetalles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85C5E39B-EB87-46B2-9B51-6C0FA60226AC}|TostonApp.Ventas.csproj|solutionrelative:migrations\\20251216135704_addpedidodetalles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-16T13:37:46.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Pedido.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Models\\Pedido.cs",
+              "RelativeDocumentMoniker": "Models\\Pedido.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Models\\Pedido.cs",
+              "RelativeToolTip": "Models\\Pedido.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAkwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:49:41.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PedidoDetalle.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Models\\PedidoDetalle.cs",
+              "RelativeDocumentMoniker": "Models\\PedidoDetalle.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Models\\PedidoDetalle.cs",
+              "RelativeToolTip": "Models\\PedidoDetalle.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:54:15.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CrearDesdeCarrito.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Pedido\\CrearDesdeCarrito.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pedido\\CrearDesdeCarrito.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Pedido\\CrearDesdeCarrito.cshtml",
+              "RelativeToolTip": "Views\\Pedido\\CrearDesdeCarrito.cshtml",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAkwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T15:44:27.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Venta\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Venta\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Venta\\Index.cshtml",
+              "RelativeToolTip": "Views\\Venta\\Index.cshtml",
+              "ViewState": "AgIAACMAAAAAAAAAAAAkwDEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Eliminar.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Venta\\Eliminar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Venta\\Eliminar.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Venta\\Eliminar.cshtml",
+              "RelativeToolTip": "Views\\Venta\\Eliminar.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAkwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CrearDesdePedido.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Venta\\CrearDesdePedido.cshtml",
+              "RelativeDocumentMoniker": "Views\\Venta\\CrearDesdePedido.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Venta\\CrearDesdePedido.cshtml",
+              "RelativeToolTip": "Views\\Venta\\CrearDesdePedido.cshtml",
+              "ViewState": "AgIAACkAAAAAAAAAAAAkwDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T15:34:10.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Productos\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Productos\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Productos\\Index.cshtml",
+              "RelativeToolTip": "Views\\Productos\\Index.cshtml",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAkwFYAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T14:34:55.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VentaController.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Controllers\\VentaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VentaController.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Controllers\\VentaController.cs",
+              "RelativeToolTip": "Controllers\\VentaController.cs",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAkwLMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:36:49.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductosController.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Controllers\\ProductosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductosController.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Controllers\\ProductosController.cs",
+              "RelativeToolTip": "Controllers\\ProductosController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAiwAIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T14:04:48.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Detalle.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Venta\\Detalle.cshtml",
+              "RelativeDocumentMoniker": "Views\\Venta\\Detalle.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Venta\\Detalle.cshtml",
+              "RelativeToolTip": "Views\\Venta\\Detalle.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "20251216154830_Ventas_PedidoDetalles_Y_Carrito_SinUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Migrations\\20251216154830_Ventas_PedidoDetalles_Y_Carrito_SinUsuario.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251216154830_Ventas_PedidoDetalles_Y_Carrito_SinUsuario.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Migrations\\20251216154830_Ventas_PedidoDetalles_Y_Carrito_SinUsuario.cs",
+              "RelativeToolTip": "Migrations\\20251216154830_Ventas_PedidoDetalles_Y_Carrito_SinUsuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T15:48:30.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Editar.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Carrito\\Editar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Carrito\\Editar.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Carrito\\Editar.cshtml",
+              "RelativeToolTip": "Views\\Carrito\\Editar.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAkwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Crear.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Carrito\\Crear.cshtml",
+              "RelativeDocumentMoniker": "Views\\Carrito\\Crear.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Carrito\\Crear.cshtml",
+              "RelativeToolTip": "Views\\Carrito\\Crear.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAkwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Carrito\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Carrito\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Carrito\\Index.cshtml",
+              "RelativeToolTip": "Views\\Carrito\\Index.cshtml",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAkwFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Eliminar.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Carrito\\Eliminar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Carrito\\Eliminar.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Carrito\\Eliminar.cshtml",
+              "RelativeToolTip": "Views\\Carrito\\Eliminar.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAkwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Pedido\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pedido\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Pedido\\Index.cshtml",
+              "RelativeToolTip": "Views\\Pedido\\Index.cshtml",
+              "ViewState": "AgIAADsAAAAAAAAAAAAkwE0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Detalle.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Pedido\\Detalle.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pedido\\Detalle.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Pedido\\Detalle.cshtml",
+              "RelativeToolTip": "Views\\Pedido\\Detalle.cshtml",
+              "ViewState": "AgIAADgAAAAAAAAAAAAkwEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TostonDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Models\\TostonDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\TostonDbContext.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Models\\TostonDbContext.cs",
+              "RelativeToolTip": "Models\\TostonDbContext.cs",
+              "ViewState": "AgIAALUAAAAAAAAAAAAkwMcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:36:49.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PedidoController.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Controllers\\PedidoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PedidoController.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Controllers\\PedidoController.cs",
+              "RelativeToolTip": "Controllers\\PedidoController.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAkwHUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:36:49.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CarritoController.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Controllers\\CarritoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CarritoController.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Controllers\\CarritoController.cs",
+              "RelativeToolTip": "Controllers\\CarritoController.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAkwJEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:36:49.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Venta.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Models\\Venta.cs",
+              "RelativeDocumentMoniker": "Models\\Venta.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Models\\Venta.cs",
+              "RelativeToolTip": "Models\\Venta.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAkwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:50:16.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CarritoCompra.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Models\\CarritoCompra.cs",
+              "RelativeDocumentMoniker": "Models\\CarritoCompra.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Models\\CarritoCompra.cs",
+              "RelativeToolTip": "Models\\CarritoCompra.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAswCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:59:31.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Models\\Producto.cs",
+              "RelativeDocumentMoniker": "Models\\Producto.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Models\\Producto.cs",
+              "RelativeToolTip": "Models\\Producto.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA3wBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:36:49.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "20251216151521_inicial5.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Migrations\\20251216151521_inicial5.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251216151521_inicial5.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Migrations\\20251216151521_inicial5.cs",
+              "RelativeToolTip": "Migrations\\20251216151521_inicial5.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T15:15:21.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Editar.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Venta\\Editar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Venta\\Editar.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Venta\\Editar.cshtml",
+              "RelativeToolTip": "Views\\Venta\\Editar.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAkwF0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "20251216145801_inicial4.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Migrations\\20251216145801_inicial4.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251216145801_inicial4.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Migrations\\20251216145801_inicial4.cs",
+              "RelativeToolTip": "Migrations\\20251216145801_inicial4.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T14:58:02.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "DevolucionController.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Controllers\\DevolucionController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DevolucionController.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Controllers\\DevolucionController.cs",
+              "RelativeToolTip": "Controllers\\DevolucionController.cs",
+              "ViewState": "AgIAAC4BAAAAAAAAAAA2wGABAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:36:49.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Productos\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Productos\\Create.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Productos\\Create.cshtml",
+              "RelativeToolTip": "Views\\Productos\\Create.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T14:35:06.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Productos\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Productos\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Productos\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Productos\\Delete.cshtml",
+              "ViewState": "AgIAACYAAAAAAAAAAAAkwDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T14:35:45.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Productos\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Productos\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Productos\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Productos\\Edit.cshtml",
+              "ViewState": "AgIAADIAAAAAAAAAAAAkwEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T14:35:19.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T14:31:59.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAkwIcAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "20251216141039_inicial3.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Migrations\\20251216141039_inicial3.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251216141039_inicial3.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Migrations\\20251216141039_inicial3.cs",
+              "RelativeToolTip": "Migrations\\20251216141039_inicial3.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T14:10:40.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "DomiciliosController.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Controllers\\DomiciliosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DomiciliosController.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Controllers\\DomiciliosController.cs",
+              "RelativeToolTip": "Controllers\\DomiciliosController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAqwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:36:49.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "20251216135704_AddPedidoDetalles.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Migrations\\20251216135704_AddPedidoDetalles.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251216135704_AddPedidoDetalles.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Migrations\\20251216135704_AddPedidoDetalles.cs",
+              "RelativeToolTip": "Migrations\\20251216135704_AddPedidoDetalles.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:57:04.778Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "AgendaController.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Controllers\\AgendaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AgendaController.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Controllers\\AgendaController.cs",
+              "RelativeToolTip": "Controllers\\AgendaController.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAiwHIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:36:49.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "CotizacionesController.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Controllers\\CotizacionesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CotizacionesController.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Controllers\\CotizacionesController.cs",
+              "RelativeToolTip": "Controllers\\CotizacionesController.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAiwGgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:36:49.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:36:49.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "20251216134534_inicial.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Migrations\\20251216134534_inicial.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251216134534_inicial.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Migrations\\20251216134534_inicial.cs",
+              "RelativeToolTip": "Migrations\\20251216134534_inicial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:45:35.203Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "TostonApp.Ventas.csproj",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\TostonApp.Ventas.csproj",
+              "RelativeDocumentMoniker": "TostonApp.Ventas.csproj",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\TostonApp.Ventas.csproj",
+              "RelativeToolTip": "TostonApp.Ventas.csproj",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-16T13:42:32.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Detalles.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Domicilios\\Detalles.cshtml",
+              "RelativeDocumentMoniker": "Views\\Domicilios\\Detalles.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Domicilios\\Detalles.cshtml",
+              "RelativeToolTip": "Views\\Domicilios\\Detalles.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.273Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:39:12.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Crear.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Cotizacion\\Crear.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cotizacion\\Crear.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Cotizacion\\Crear.cshtml",
+              "RelativeToolTip": "Views\\Cotizacion\\Crear.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Domicilios.cs",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Models\\Domicilios.cs",
+              "RelativeDocumentMoniker": "Models\\Domicilios.cs",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Models\\Domicilios.cs",
+              "RelativeToolTip": "Models\\Domicilios.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAqwC4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:36:49.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Domicilios\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Domicilios\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Domicilios\\Index.cshtml",
+              "RelativeToolTip": "Views\\Domicilios\\Index.cshtml",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAqwK8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Crear.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Domicilios\\Crear.cshtml",
+              "RelativeDocumentMoniker": "Views\\Domicilios\\Crear.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Domicilios\\Crear.cshtml",
+              "RelativeToolTip": "Views\\Domicilios\\Crear.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAF4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Editar.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Domicilios\\Editar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Domicilios\\Editar.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Domicilios\\Editar.cshtml",
+              "RelativeToolTip": "Views\\Domicilios\\Editar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Eliminar.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Domicilios\\Eliminar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Domicilios\\Eliminar.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Domicilios\\Eliminar.cshtml",
+              "RelativeToolTip": "Views\\Domicilios\\Eliminar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Agenda\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Agenda\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Agenda\\Index.cshtml",
+              "RelativeToolTip": "Views\\Agenda\\Index.cshtml",
+              "ViewState": "AgIAAL0AAAAAAAAAAAAqwOAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Agenda\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Agenda\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Agenda\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Agenda\\Edit.cshtml",
+              "ViewState": "AgIAADEAAAAAAAAAAAAqwFQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Crear.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Devoluciones\\Crear.cshtml",
+              "RelativeDocumentMoniker": "Views\\Devoluciones\\Crear.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Devoluciones\\Crear.cshtml",
+              "RelativeToolTip": "Views\\Devoluciones\\Crear.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Eliminar.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Devoluciones\\Eliminar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Devoluciones\\Eliminar.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Devoluciones\\Eliminar.cshtml",
+              "RelativeToolTip": "Views\\Devoluciones\\Eliminar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Editar.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Devoluciones\\Editar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Devoluciones\\Editar.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Devoluciones\\Editar.cshtml",
+              "RelativeToolTip": "Views\\Devoluciones\\Editar.cshtml",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAqwHUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Devoluciones\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Devoluciones\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Devoluciones\\Index.cshtml",
+              "RelativeToolTip": "Views\\Devoluciones\\Index.cshtml",
+              "ViewState": "AgIAANoAAAAAAAAAAAAqwP0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Eliminar.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Cotizacion\\Eliminar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cotizacion\\Eliminar.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Cotizacion\\Eliminar.cshtml",
+              "RelativeToolTip": "Views\\Cotizacion\\Eliminar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Cotizacion\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cotizacion\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Cotizacion\\Index.cshtml",
+              "RelativeToolTip": "Views\\Cotizacion\\Index.cshtml",
+              "ViewState": "AgIAACMAAAAAAAAAAAAcwEMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Detalles.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Cotizacion\\Detalles.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cotizacion\\Detalles.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Cotizacion\\Detalles.cshtml",
+              "RelativeToolTip": "Views\\Cotizacion\\Detalles.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Editar.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Cotizacion\\Editar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cotizacion\\Editar.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Cotizacion\\Editar.cshtml",
+              "RelativeToolTip": "Views\\Cotizacion\\Editar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Agenda\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Agenda\\Create.cshtml",
+              "ToolTip": "C:\\Users\\jeano\\source\\repos\\.NET\\TostonApp.Ventas\\Views\\Agenda\\Create.cshtml",
+              "RelativeToolTip": "Views\\Agenda\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T13:36:49.557Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

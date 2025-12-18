@@ -1,0 +1,77 @@
+﻿@model IEnumerable<TostonApp.Ventas.Models.Pedido>
+@{
+    ViewData["Title"] = "Pedidos";
+}
+
+<div class="main-content">
+    <h1>Pedidos</h1>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">@TempData["Success"]</div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th># Pedido</th>
+                <th>Fecha</th>
+                <th>Cédula</th>
+                <th>Total</th>
+                <th>Estado</th>
+                <th>Activo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var p in Model)
+                {
+                    <tr>
+                        <td>@p.ID_Pedido</td>
+                        <td>@p.Fecha.ToString("dd/MM/yyyy HH:mm")</td>
+                        <td>@(string.IsNullOrWhiteSpace(p.Cedula) ? "—" : p.Cedula)</td>
+                        <td>$@p.Total.ToString("N2")</td>
+                        <td>
+                            <span class="badge @GetEstadoClass(p.Estado)">
+                                @p.Estado
+                            </span>
+                        </td>
+                        <td>
+                            <span class="badge @(p.Activo ? "badge-success" : "badge-secondary")">
+                                @(p.Activo ? "Sí" : "No")
+                            </span>
+                        </td>
+                        <td class="action-buttons">
+                            <a class="btn-view" href="@Url.Action("Detalle", "Pedido", new { id = p.ID_Pedido })">Ver</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr><td colspan="7">No hay pedidos</td></tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@functions {
+    string GetEstadoClass(string estado)
+    {
+        if (string.IsNullOrWhiteSpace(estado)) return "badge-secondary";
+        return estado switch
+        {
+            "Pendiente" => "badge-warning",
+            "En Proceso" => "badge-info",
+            "Completado" => "badge-success",
+            "Cancelado" => "badge-danger",
+            _ => "badge-secondary"
+        };
+    }
+}

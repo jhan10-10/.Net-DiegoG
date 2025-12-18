@@ -1,0 +1,221 @@
+﻿@model TostonApp.Ventas.Models.Venta
+
+@{
+    ViewData["Title"] = "Registrar Venta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .form-container {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #2C3E50;
+        }
+
+            .form-group label.required::after {
+                content: " *";
+                color: #E53935;
+            }
+
+    .form-control {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #E0E0E0;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #7CB342;
+            box-shadow: 0 0 0 3px rgba(124, 179, 66, 0.1);
+        }
+
+    .text-danger {
+        color: #E53935;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+        display: block;
+    }
+
+    .form-actions {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .btn-success, .btn-secondary {
+        padding: 0.75rem 2rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .btn-success {
+        background-color: #7CB342;
+        color: white;
+    }
+
+        .btn-success:hover {
+            background-color: #558B2F;
+        }
+
+    .btn-secondary {
+        background-color: #7F8C8D;
+        color: white;
+    }
+
+        .btn-secondary:hover {
+            background-color: #6c757d;
+        }
+
+    .alert {
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+
+    .alert-danger {
+        background-color: #FFEBEE;
+        color: #C62828;
+        border-left: 4px solid #E53935;
+    }
+
+    .alert-success {
+        background-color: #E8F5E9;
+        color: #2E7D32;
+        border-left: 4px solid #4CAF50;
+    }
+
+    .page-header {
+        margin-bottom: 2rem;
+    }
+
+        .page-header h1 {
+            font-size: 2rem;
+            color: #2C3E50;
+            font-weight: 600;
+        }
+</style>
+
+<div class="page-header">
+    <h1>Registrar Nueva Venta</h1>
+</div>
+
+<!-- Mostrar mensajes de éxito/error -->
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        <strong>¡Éxito!</strong> @TempData["Success"]
+    </div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">
+        <strong>Error:</strong> @TempData["Error"]
+    </div>
+}
+
+<!-- Mostrar errores de validación -->
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        <strong>Error:</strong> Por favor corrija los siguientes errores:
+        <ul style="margin: 0.5rem 0 0 1.5rem;">
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
+
+<form asp-action="Crear" method="post" class="form-container">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="ID_Pedido">Pedido (opcional)</label>
+        <select asp-for="ID_Pedido" class="form-control">
+            <option value="">-- Venta Directa --</option>
+            @if (ViewBag.Pedidos != null)
+            {
+                @foreach (var pedido in ViewBag.Pedidos)
+                {
+                    <option value="@pedido.ID_Pedido">
+                        Pedido #@pedido.ID_Pedido - Cédula: @pedido.Cedula - Total: $@pedido.Total.ToString("N2")
+                    </option>
+                }
+            }
+        </select>
+        <span asp-validation-for="ID_Pedido" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Total" class="required">Total</label>
+        <input asp-for="Total" type="number" step="0.01" class="form-control" placeholder="Ingrese el total de la venta" required />
+        <span asp-validation-for="Total" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MetodoPago">Método de Pago</label>
+        <select asp-for="MetodoPago" class="form-control">
+            <option value="">-- Seleccione --</option>
+            <option value="Efectivo">Efectivo</option>
+            <option value="Tarjeta">Tarjeta de Crédito/Débito</option>
+            <option value="Transferencia">Transferencia Bancaria</option>
+            <option value="Nequi">Nequi</option>
+            <option value="Daviplata">Daviplata</option>
+        </select>
+        <span asp-validation-for="MetodoPago" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Estado" class="required">Estado</label>
+        <select asp-for="Estado" class="form-control" required>
+            <option value="Completada" selected>Completada</option>
+            <option value="Pendiente">Pendiente</option>
+            <option value="Cancelada">Cancelada</option>
+        </select>
+        <span asp-validation-for="Estado" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Observaciones">Observaciones</label>
+        <textarea asp-for="Observaciones" class="form-control" rows="4" placeholder="Observaciones adicionales (opcional)"></textarea>
+        <span asp-validation-for="Observaciones" class="text-danger"></span>
+    </div>
+
+    <div class="form-actions">
+        <button type="submit" class="btn-success">
+            <i class="fas fa-save"></i> Guardar Venta
+        </button>
+        <a href="@Url.Action("Index", "Venta")" class="btn-secondary">
+            <i class="fas fa-times"></i> Cancelar
+        </a>
+    </div>
+</form>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
+}

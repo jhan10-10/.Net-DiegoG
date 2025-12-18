@@ -1,0 +1,138 @@
+﻿@model IEnumerable<TostonApp.Ventas.Models.Producto>
+@{
+    ViewData["Title"] = "Productos";
+}
+
+<link rel="stylesheet" href="~/css/site.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<div class="main-content">
+    <div class="page-header flex-between">
+        <div>
+            <h1>Productos</h1>
+            <p class="muted">Catálogo, precios y control de inventario.</p>
+        </div>
+
+        <div class="header-actions">
+            <a class="btn-success" href="@Url.Action("Create", "Productos")">
+                <i class="fas fa-plus"></i> Nuevo Producto
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="grid-3">
+            <div class="form-group">
+                <label>Buscar</label>
+                <input type="text" id="q" class="form-control" placeholder="Nombre o descripción..." onkeyup="applyFilters()" />
+            </div>
+
+            <div class="form-group">
+                <label>Stock</label>
+                <select id="stockFilter" class="form-control" onchange="applyFilters()">
+                    <option value="">Todos</option>
+                    <option value="low">Stock bajo (≤ 5)</option>
+                    <option value="out">Sin stock (= 0)</option>
+                    <option value="ok">Con stock (> 0)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Estado</label>
+                <select id="activeFilter" class="form-control" onchange="applyFilters()">
+                    <option value="">Todos</option>
+                    <option value="active">Activos</option>
+                    <option value="inactive">Inactivos</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-container card">
+        <table class="data-table" id="tablaProductos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>Estado</th>
+                    <th style="width:190px;">Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyProductos">
+                @if (Model != null && Model.Any())
+                {
+                    foreach (var p in Model)
+                    {
+                        var stockClass = p.Stock == 0 ? "badge-danger" : (p.Stock <= 5 ? "badge-warning" : "badge-success");
+
+                        <tr data-active="@(p.Activo ? "active" : "inactive")" data-stock="@p.Stock">
+                            <td>#@p.ID_Producto.ToString("000000")</td>
+                            <td>
+                                <div style="display:flex; flex-direction:column; gap:2px;">
+                                    <strong>@p.Nombre</strong>
+                                    <small class="muted">@(!string.IsNullOrEmpty(p.Descripcion) ? p.Descripcion : "—")</small>
+                                </div>
+                            </td>
+                            <td>$@p.Precio.ToString("N2")</td>
+                            <td>
+                                <span class="badge @stockClass">@p.Stock</span>
+                            </td>
+                            <td>
+                                <span class="badge @(p.Activo ? "badge-success" : "badge-secondary")">
+                                    @(p.Activo ? "Activo" : "Inactivo")
+                                </span>
+                            </td>
+                            <td class="action-buttons">
+                                <a class="btn-edit" title="Editar"
+                                   href="@Url.Action("Edit", "Productos", new { id = p.ID_Producto })">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a class="btn-delete" title="Eliminar"
+                                   href="@Url.Action("Delete", "Productos", new { id = p.ID_Producto })">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="6" class="text-center">
+                            No hay productos registrados.
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    function applyFilters() {
+        const q = (document.getElementById('q').value || '').toLowerCase();
+        const stockFilter = document.getElementById('stockFilter').value;
+        const activeFilter = document.getElementById('activeFilter').value;
+
+        const rows = document.querySelectorAll('#tbodyProductos tr');
+        rows.forEach(r => {
+            const text = r.textContent.toLowerCase();
+            const active = r.getAttribute('data-active');
+            const stock = parseInt(r.getAttribute('data-stock') || '0');
+
+            let ok = true;
+
+            if (q && !text.includes(q)) ok = false;
+
+            if (activeFilter && active !== activeFilter) ok = false;
+
+            if (stockFilter === 'out' && stock !== 0) ok = false;
+            if (stockFilter === 'low' && !(stock > 0 && stock <= 5)) ok = false;
+            if (stockFilter === 'ok' && !(stock > 0)) ok = false;
+
+            r.style.display = ok ? '' : 'none';
+        });
+    }
+</script>

@@ -1,0 +1,45 @@
+﻿@model TostonApp.Ventas.Models.Cotizacion   
+@{
+    ViewData["Title"] = "Crear Cotización";
+}
+
+<div class="main-content">
+    <h1>Crear Cotización</h1>
+
+    <form asp-action="Crear" method="post" class="form-container">
+
+        <label>N° Cotización</label>
+        <input asp-for="NumeroCotizacion" class="form-control" />
+
+        <label>Cliente</label>
+        <input asp-for="Cliente" class="form-control" />
+
+        <label>Cédula</label>
+        <input asp-for="Cedula" class="form-control" />
+
+        <label>Fecha</label>
+        <input asp-for="Fecha" type="date" class="form-control" />
+
+        <label>Fecha Vencimiento</label>
+        <input asp-for="FechaVencimiento" type="date" class="form-control" />
+
+        <label>Total</label>
+        <input asp-for="Total" class="form-control" />
+
+        <label>Estado</label>
+        <select asp-for="Estado" class="form-control">
+            <option>Pendiente</option>
+            <option>Aprobada</option>
+            <option>Rechazada</option>
+            <option>Convertida</option>
+        </select>
+
+        <label>Observaciones</label>
+        <textarea asp-for="Observaciones" class="form-control"></textarea>
+
+        <input type="hidden" asp-for="ID_Usuario" value="1" />
+
+        <button class="btn-success">Guardar</button>
+        <a class="btn-secondary" href="/Cotizacion">Cancelar</a>
+    </form>
+</div>

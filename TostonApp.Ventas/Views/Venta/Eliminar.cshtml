@@ -1,0 +1,21 @@
+﻿@model TostonApp.Ventas.Models.Venta
+@{
+    ViewData["Title"] = "Eliminar Venta";
+}
+
+<div class="main-content">
+    <h1>¿Eliminar Venta?</h1>
+
+    <p><strong># Venta:</strong> @Model.ID_venta</p>
+    <p><strong># Pedido:</strong> @Model.ID_Pedido</p>
+    <p><strong>Total:</strong> $@Model.Total.ToString("N2")</p>
+    <p><strong>Método Pago:</strong> @Model.MetodoPago</p>
+
+    <form asp-action="EliminarConfirmado" method="post">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="id" value="@Model.ID_venta" />
+
+        <button class="btn-danger">Eliminar</button>
+        <a class="btn-secondary" href="@Url.Action("Index", "Venta")">Cancelar</a>
+    </form>
+</div>

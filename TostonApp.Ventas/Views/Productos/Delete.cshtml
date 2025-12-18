@@ -1,0 +1,56 @@
+﻿@model TostonApp.Ventas.Models.Producto
+@{
+    ViewData["Title"] = "Eliminar Producto";
+}
+
+<link rel="stylesheet" href="~/css/site.css" />
+
+<div class="main-content">
+    <div class="card danger">
+        <div class="card-header">
+            <h1><i class="fas fa-triangle-exclamation"></i> Confirmar eliminación</h1>
+            <p class="muted">Recomendado: desactivar (soft delete). No se borra historial de ventas.</p>
+        </div>
+
+        <div class="card-body">
+            <div class="grid-2">
+                <div class="info-box">
+                    <span class="label">Producto</span>
+                    <span class="value">@Model.Nombre</span>
+                </div>
+                <div class="info-box">
+                    <span class="label">ID</span>
+                    <span class="value">#@Model.ID_Producto.ToString("000000")</span>
+                </div>
+            </div>
+
+            <div class="grid-3" style="margin-top:12px;">
+                <div class="info-box">
+                    <span class="label">Precio</span>
+                    <span class="value">$@Model.Precio.ToString("N2")</span>
+                </div>
+                <div class="info-box">
+                    <span class="label">Stock</span>
+                    <span class="value">@Model.Stock</span>
+                </div>
+                <div class="info-box">
+                    <span class="label">Estado</span>
+                    <span class="value">@((Model.Activo) ? "Activo" : "Inactivo")</span>
+                </div>
+            </div>
+
+            <form asp-action="DeleteConfirmed" method="post" class="actions" style="margin-top:14px;">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="id" value="@Model.ID_Producto" />
+
+                <button type="submit" class="btn-danger">
+                    <i class="fas fa-trash"></i> Confirmar
+                </button>
+
+                <a class="btn-secondary" href="@Url.Action("Details", "Productos", new { id = Model.ID_Producto })">
+                    Cancelar
+                </a>
+            </form>
+        </div>
+    </div>
+</div>

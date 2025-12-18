@@ -1,0 +1,48 @@
+﻿@model TostonApp.Ventas.Models.CarritoCompra
+@{
+    ViewData["Title"] = "Editar Carrito";
+}
+
+<div class="main-content">
+    <h1>Editar Producto en Carrito</h1>
+
+    <form asp-controller="Carrito" asp-action="Editar" method="post">
+        @Html.AntiForgeryToken()
+
+        <div asp-validation-summary="All" class="alert alert-danger"></div>
+
+        <input type="hidden" asp-for="ID_Carrito" />
+
+        <div class="form-group">
+            <label>Producto</label>
+            <input class="form-control" value="@(Model.Producto?.Nombre ?? ("Producto ID " + Model.ID_Producto))" disabled />
+            <small class="text-muted">No se cambia el producto, solo la cantidad.</small>
+        </div>
+
+        <div class="form-group">
+            <label>Cantidad *</label>
+            <input asp-for="Cantidad" type="number" min="1" max="999999" class="form-control" required />
+            <span asp-validation-for="Cantidad" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Precio Unitario (automático)</label>
+            <input class="form-control" value="$@Model.PrecioUnitario.ToString("N2")" disabled />
+        </div>
+
+        <div class="form-group">
+            <label>Subtotal (automático)</label>
+            <input class="form-control" value="$@Model.Subtotal.ToString("N2")" disabled />
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn-success">Guardar Cambios</button>
+            <a class="btn-secondary" href="@Url.Action("Index", "Carrito")">Cancelar</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
+}

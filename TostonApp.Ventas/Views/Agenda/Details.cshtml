@@ -1,0 +1,11 @@
+﻿@model TostonApp.Ventas.Models.Agenda
+
+<h2>Detalles del Evento</h2>
+
+<p><strong>Título:</strong> @Model.Titulo</p>
+<p><strong>Descripción:</strong> @Model.Descripcion</p>
+<p><strong>Fecha:</strong> @Model.Fecha.ToShortDateString()</p>
+<p><strong>Hora:</strong> @Model.Hora</p>
+<p><strong>Estado:</strong> @Model.Estado</p>
+
+<a href="/Agenda" class="btn btn-secondary">Volver</a>

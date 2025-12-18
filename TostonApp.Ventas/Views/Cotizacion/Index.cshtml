@@ -1,0 +1,190 @@
+﻿@model IEnumerable<TostonApp.Ventas.Models.Cotizacion>
+
+@{
+    ViewData["Title"] = "Consultar Cotizaciones";
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+<body>
+    <div class="main-container">
+        
+        <div class="content-wrapper">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3>Configuración</h3>
+                    <ul>
+                        <li><a href="/Configuracion/Notificaciones"><i class="fas fa-bell"></i> Gestión de Notificaciones</a></li>
+                        <li><a href="/Configuracion/Roles"><i class="fas fa-user-tag"></i> Roles</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Usuarios</h3>
+                    <ul>
+                        <li><a href="/Usuario/Gestion"><i class="fas fa-users"></i> Gestión de Usuario</a></li>
+                        <li><a href="/Usuario/Acceso"><i class="fas fa-key"></i> Gestión de acceso</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Compras</h3>
+                    <ul>
+                        <li><a href="/Compras/Categorias"><i class="fas fa-tags"></i> Gestión categorías de insumos</a></li>
+                        <li><a href="/Compras/Insumos"><i class="fas fa-boxes"></i> Gestión de insumos</a></li>
+                        <li><a href="/Compras/Proveedores"><i class="fas fa-truck"></i> Gestión de proveedores</a></li>
+                        <li><a href="/Compras/Compras"><i class="fas fa-shopping-cart"></i> Gestión de compras</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Producción</h3>
+                    <ul>
+                        <li><a href="/Produccion/Categorias"><i class="fas fa-list"></i> Gestión de categoría de productos</a></li>
+                        <li><a href="/Produccion/Productos"><i class="fas fa-box"></i> Gestión de productos</a></li>
+                        <li><a href="/Produccion/FichaTecnica"><i class="fas fa-file-alt"></i> Ficha Técnica del Producto</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section active">
+                    <h3>Ventas</h3>
+                    <ul>
+                        <li class="active"><a href="/Cotizacion"><i class="fas fa-file-invoice"></i> Gestión de Cotización</a></li>
+                        <li><a href="/Pedido"><i class="fas fa-clipboard-list"></i> Gestión de Pedidos</a></li>
+                        <li><a href="/Ventas"><i class="fas fa-cash-register"></i> Gestión de ventas</a></li>
+                        <li><a href="/Agenda"><i class="fas fa-calendar"></i> Gestión de agenda</a></li>
+                        <li><a href="/Devoluciones"><i class="fas fa-undo"></i> Gestión devoluciones</a></li>
+                        <li><a href="/Domicilios"><i class="fas fa-shipping-fast"></i> Gestión de domicilios</a></li>
+                        <li><a href="/Carrito"><i class="fas fa-shopping-cart"></i> Gestionar carrito de compras</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Dashboard</h3>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <div class="page-header">
+                    <h1>Gestión de Cotizaciones</h1>
+                </div>
+
+                <div class="search-section">
+                    <div class="search-bar">
+                        <label>Buscar cotización</label>
+                        <input type="text" id="searchInput" placeholder="escribe aquí ........" />
+                        <button class="btn-primary" onclick="buscarCotizacion()">Buscar</button>
+                    </div>
+
+                    <div class="filters">
+                        <label>Filtros ▽:</label>
+                        <select id="filtroEstado" class="filter-select">
+                            <option value="">Estado ↓</option>
+                            <option value="Pendiente">Pendiente</option>
+                            <option value="Aprobada">Aprobada</option>
+                            <option value="Rechazada">Rechazada</option>
+                            <option value="Convertida">Convertida</option>
+                        </select>
+                        <input type="date" id="filtroFecha" class="filter-date" />
+                        <button class="btn-secondary" onclick="limpiarFiltros()">Limpiar Filtros ▽</button>
+                    </div>
+                </div>
+
+                <div class="action-section">
+                    <button class="btn-success" onclick="location.href='@Url.Action("Crear", "Cotizacion")'">
+                        <i class="fas fa-plus"></i> Crear Cotización
+                    </button>
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>N° Cotización</th>
+                                <th>Cliente</th>
+                                <th>Fecha</th>
+                                <th>Total</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaCotizaciones">
+                            @if (Model != null && Model.Any())
+                            {
+                                @foreach (var c in Model)
+                                {
+                                    <tr>
+                                        <td>@c.NumeroCotizacion</td>
+                                        <td>@c.Cliente</td>
+                                        <td>@c.Fecha.ToString("dd/MM/yyyy")</td>
+                                        <td>$@c.Total.ToString("N2")</td>
+                                        <td>
+                                            <span class="badge badge-@obtenerClaseEstado(c.Estado)">
+                                                @c.Estado
+                                            </span>
+                                        </td>
+                                        <td class="action-buttons">
+
+                                            <!-- VER -->
+                                            <button class="btn-view"
+                                                    onclick="location.href='/Cotizacion/Detalles/@c.ID_Cotizacion'">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+
+                                            <!-- EDITAR -->
+                                            <button class="btn-edit"
+                                                    onclick="location.href='/Cotizacion/Editar/@c.ID_Cotizacion'">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+
+                                            <!-- ELIMINAR -->
+                                            <button class="btn-delete"
+                                                    onclick="location.href='/Cotizacion/Eliminar/@c.ID_Cotizacion'">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="6" class="text-center">No hay cotizaciones registradas</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+            </main>
+        </div>
+
+        <footer class="footer">
+            <p>© 2025 TostonApp — Todos los derechos reservados .</p>
+        </footer>
+    </div>
+
+    <script src="~/js/cotizaciones.js"></script>
+</body>
+</html>
+
+@functions {
+    string obtenerClaseEstado(string estado)
+    {
+        return estado switch
+        {
+            "Pendiente" => "warning",
+            "Aprobada" => "success",
+            "Rechazada" => "danger",
+            "Convertida" => "info",
+            _ => "secondary"
+        };
+    }
+}

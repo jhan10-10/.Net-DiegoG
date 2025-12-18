@@ -1,0 +1,118 @@
+﻿@model TostonApp.Ventas.Models.Devolucion
+
+@{
+    ViewData["Title"] = "Editar Devolución";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-header">
+    <h1>Editar Devolución #@Model.ID_devolucion</h1>
+</div>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">
+        <strong>Error:</strong> @TempData["Error"]
+    </div>
+}
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        <strong>Error:</strong> Por favor corrija los siguientes errores:
+        <ul style="margin: 0.5rem 0 0 1.5rem;">
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
+
+<form asp-action="Editar" method="post" class="form-container">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <input type="hidden" asp-for="ID_devolucion" />
+    <input type="hidden" asp-for="Fecha" />
+    <input type="hidden" asp-for="Activo" />
+
+    <div class="info-box">
+        <strong>Información:</strong> Editando devolución #@Model.ID_devolucion.ToString("000000")
+        creada el @Model.Fecha.ToString("dd/MM/yyyy HH:mm")
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ID_venta" class="required">Venta</label>
+        <select asp-for="ID_venta" class="form-control" required>
+            <option value="">-- Seleccione una venta --</option>
+            @if (ViewBag.Ventas != null)
+            {
+                @foreach (var venta in ViewBag.Ventas)
+                {
+                    <option value="@venta.ID_venta" selected="@(Model.ID_venta == venta.ID_venta)">
+                        Venta #@venta.ID_venta.ToString("000000") -
+                        Fecha: @venta.Fecha_Venta.ToString("dd/MM/yyyy") -
+                        Total: $@venta.Total.ToString("N2")
+                    </option>
+                }
+            }
+        </select>
+        <span asp-validation-for="ID_venta" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ID_Producto" class="required">ID Producto</label>
+        <input asp-for="ID_Producto" type="number" class="form-control" required />
+        <span asp-validation-for="ID_Producto" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Motivo" class="required">Motivo de la Devolución</label>
+        <select asp-for="Motivo" class="form-control" required>
+            <option value="">-- Seleccione un motivo --</option>
+            <option value="Producto defectuoso">Producto defectuoso</option>
+            <option value="No corresponde al pedido">No corresponde al pedido</option>
+            <option value="Cliente insatisfecho">Cliente insatisfecho</option>
+            <option value="Producto vencido">Producto vencido</option>
+            <option value="Otro">Otro</option>
+        </select>
+        <span asp-validation-for="Motivo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MontoDevolucion" class="required">Monto a Devolver</label>
+        <input asp-for="MontoDevolucion" type="number" step="0.01" class="form-control" required />
+        <span asp-validation-for="MontoDevolucion" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Estado" class="required">Estado</label>
+        <select asp-for="Estado" class="form-control" required>
+            <option value="Pendiente">Pendiente</option>
+            <option value="Aprobada">Aprobada</option>
+            <option value="Rechazada">Rechazada</option>
+        </select>
+        <span asp-validation-for="Estado" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Observaciones">Observaciones</label>
+        <textarea asp-for="Observaciones" class="form-control" rows="4"
+                  placeholder="Detalles adicionales sobre la devolución (opcional)"></textarea>
+        <span asp-validation-for="Observaciones" class="text-danger"></span>
+    </div>
+
+    <div class="form-actions">
+        <button type="submit" class="btn-success">
+            <i class="fas fa-save"></i> Guardar Cambios
+        </button>
+        <a href="@Url.Action("Index", "Devoluciones")" class="btn-secondary">
+            <i class="fas fa-times"></i> Cancelar
+        </a>
+    </div>
+</form>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
+}

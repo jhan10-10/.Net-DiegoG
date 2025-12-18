@@ -1,0 +1,15 @@
+﻿@model TostonApp.Ventas.Models.Pedido
+
+<div class="main-content">
+    <h1>¿Eliminar Pedido?</h1>
+
+    <p><strong>Pedido N°:</strong> @Model.ID_Pedido</p>
+    <p><strong>Cliente (Cédula):</strong> @Model.Cedula</p>
+
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" name="id" value="@Model.ID_Pedido" />
+        <button type="submit" class="btn-danger">Eliminar</button>
+        <a class="btn-secondary" href="@Url.Action("Index", "Pedido")">Cancelar</a>
+    </form>
+
+</div>

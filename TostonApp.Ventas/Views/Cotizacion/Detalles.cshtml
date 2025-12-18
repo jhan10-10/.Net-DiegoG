@@ -1,0 +1,22 @@
+﻿@model TostonApp.Ventas.Models.Cotizacion
+
+@{
+    ViewData["Title"] = "Detalle de Cotización";
+}
+
+<div class="main-content">
+    <h1>Detalle de Cotización</h1>
+
+    <p><strong>N° Cotización:</strong> @Model.NumeroCotizacion</p>
+    <p><strong>Cliente:</strong> @Model.Cliente</p>
+    <p><strong>Cédula:</strong> @(Model.Cedula ?? "N/A")</p>
+    <p><strong>Fecha:</strong> @Model.Fecha.ToString("dd/MM/yyyy")</p>
+    <p><strong>Fecha Vencimiento:</strong> @Model.FechaVencimiento.ToString("dd/MM/yyyy")</p>
+    <p><strong>Total:</strong> $@Model.Total.ToString("N2")</p>
+    <p><strong>Estado:</strong> @Model.Estado</p>
+    <p><strong>Observaciones:</strong> @(Model.Observaciones ?? "Sin observaciones")</p>
+
+    <br />
+
+    <a href="@Url.Action("Index", "Cotizacion")" class="btn-secondary">Volver</a>
+</div>

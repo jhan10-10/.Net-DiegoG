@@ -1,0 +1,21 @@
+﻿@model TostonApp.Ventas.Models.Venta
+@{
+    ViewData["Title"] = "Detalle Venta";
+}
+
+<div class="main-content">
+    <h1>Detalle de Venta</h1>
+
+    <table class="data-table">
+        <tr><th>ID Venta</th><td>@Model.ID_venta</td></tr>
+        <tr><th>ID Pedido</th><td>@Model.ID_Pedido</td></tr>
+        <tr><th>Fecha</th><td>@Model.Fecha_Venta</td></tr>
+        <tr><th>Total</th><td>$@Model.Total.ToString("N2")</td></tr>
+        <tr><th>Método Pago</th><td>@Model.MetodoPago</td></tr>
+        <tr><th>Estado</th><td>@Model.Estado</td></tr>
+    </table>
+
+    <div class="form-actions">
+        <a class="btn-secondary" href="@Url.Action("Index", "Venta")">Volver</a>
+    </div>
+</div>

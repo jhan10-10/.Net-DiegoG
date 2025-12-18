@@ -1,0 +1,17 @@
+﻿@model TostonApp.Ventas.Models.Domicilio
+@{
+    ViewData["Title"] = "Eliminar Entrega";
+}
+
+<div class="main-content">
+    <div class="page-header">
+        <h1>Eliminar Entrega</h1>
+    </div>
+
+    <p>¿Estás seguro de que deseas eliminar la entrega <strong>#@Model.ID_entrega</strong>?</p>
+
+    <form method="post">
+        <button type="submit" class="btn-danger">Eliminar</button>
+        <a href="/Domicilios" class="btn-secondary">Cancelar</a>
+    </form>
+</div>

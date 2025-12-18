@@ -1,0 +1,46 @@
+﻿@model TostonApp.Ventas.Models.CarritoCompra
+@{
+    ViewData["Title"] = "Eliminar - Carrito";
+}
+
+<div class="main-content">
+    <h1>Eliminar del Carrito</h1>
+
+    <div class="alert alert-warning" style="margin-bottom:20px;">
+        <strong>⚠️ Advertencia:</strong> ¿Está seguro de eliminar este producto del carrito?
+    </div>
+
+    <div style="background:#f9f9f9; padding:20px; border-radius:8px; margin-bottom:20px;">
+        <table style="width:100%;">
+            <tr>
+                <td style="font-weight:600; padding:8px;">Producto:</td>
+                <td style="padding:8px;">@(Model.Producto?.Nombre ?? "Producto ID " + Model.ID_Producto)</td>
+            </tr>
+            <tr>
+                <td style="font-weight:600; padding:8px;">Precio Unitario:</td>
+                <td style="padding:8px;">$@Model.PrecioUnitario.ToString("N2")</td>
+            </tr>
+            <tr>
+                <td style="font-weight:600; padding:8px;">Cantidad:</td>
+                <td style="padding:8px;">@Model.Cantidad</td>
+            </tr>
+            <tr>
+                <td style="font-weight:600; padding:8px;">Subtotal:</td>
+                <td style="padding:8px;"><strong>$@Model.Subtotal.ToString("N2")</strong></td>
+            </tr>
+            <tr>
+                <td style="font-weight:600; padding:8px;">Fecha Agregado:</td>
+                <td style="padding:8px;">@Model.FechaAgregado.ToString("dd/MM/yyyy HH:mm")</td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="display:flex; gap:10px;">
+        <form asp-action="EliminarConfirmado" method="post">
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="id" value="@Model.ID_Carrito" />
+            <button type="submit" class="btn-danger">Confirmar Eliminación</button>
+        </form>
+        <a class="btn-secondary" href="@Url.Action("Index", "Carrito")">Cancelar</a>
+    </div>
+</div>

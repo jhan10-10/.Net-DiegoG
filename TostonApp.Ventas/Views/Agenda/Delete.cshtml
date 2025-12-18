@@ -1,0 +1,16 @@
+﻿@model TostonApp.Ventas.Models.Agenda
+
+<h2>Eliminar Registro</h2>
+
+<p><strong>¿Estás seguro que deseas eliminar este evento?</strong></p>
+
+<div>
+    <p><strong>Título:</strong> @Model.Titulo</p>
+    <p><strong>Fecha:</strong> @Model.Fecha.ToShortDateString()</p>
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="ID_agenda" />
+    <button class="btn btn-danger">Eliminar</button>
+    <a href="/Agenda" class="btn btn-secondary">Cancelar</a>
+</form>

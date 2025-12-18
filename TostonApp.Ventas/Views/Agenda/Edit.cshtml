@@ -1,0 +1,85 @@
+﻿@model TostonApp.Ventas.Models.Agenda
+
+@{
+    ViewData["Title"] = "Editar Evento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-header">
+    <h1>Editar Evento #@Model.ID_agenda</h1>
+</div>
+
+<form asp-action="Edit" method="post" class="form-container">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <input type="hidden" asp-for="ID_agenda" />
+    <input type="hidden" asp-for="Fecha_Creacion" />
+    <input type="hidden" asp-for="Activo" />
+
+    <div class="form-group">
+        <label asp-for="Titulo" class="required">Título</label>
+        <input asp-for="Titulo" class="form-control" required />
+        <span asp-validation-for="Titulo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Descripcion" class="required">Descripción</label>
+        <textarea asp-for="Descripcion" class="form-control" rows="4" required></textarea>
+        <span asp-validation-for="Descripcion" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Fecha" class="required">Fecha</label>
+        <input asp-for="Fecha" type="date" class="form-control" required />
+        <span asp-validation-for="Fecha" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Hora" class="required">Hora</label>
+        <input asp-for="Hora" type="time" class="form-control" required />
+        <span asp-validation-for="Hora" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TipoEvento">Tipo de Evento</label>
+        <select asp-for="TipoEvento" class="form-control">
+            <option value="">-- Seleccione --</option>
+            <option value="Reunión">Reunión</option>
+            <option value="Llamada">Llamada</option>
+            <option value="Seguimiento">Seguimiento</option>
+            <option value="Visita">Visita</option>
+            <option value="Otro">Otro</option>
+        </select>
+        <span asp-validation-for="TipoEvento" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Estado" class="required">Estado</label>
+        <select asp-for="Estado" class="form-control" required>
+            <option value="Pendiente">Pendiente</option>
+            <option value="Completada">Completada</option>
+            <option value="Cancelada">Cancelada</option>
+        </select>
+        <span asp-validation-for="Estado" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ID_Usuario" class="required">ID Usuario</label>
+        <input asp-for="ID_Usuario" type="number" class="form-control" required />
+        <span asp-validation-for="ID_Usuario" class="text-danger"></span>
+    </div>
+
+    <div class="form-actions">
+        <button type="submit" class="btn-success">
+            <i class="fas fa-save"></i> Guardar Cambios
+        </button>
+        <a href="@Url.Action("Index", "Agenda")" class="btn-secondary">
+            <i class="fas fa-times"></i> Cancelar
+        </a>
+    </div>
+</form>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
+}

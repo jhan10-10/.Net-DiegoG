@@ -1,0 +1,56 @@
+﻿@model IEnumerable<TostonApp.Ventas.Models.Venta>
+@{
+    ViewData["Title"] = "Ventas";
+}
+
+<div class="main-content">
+    <h1>Ventas</h1>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">@TempData["Success"]</div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th># Venta</th>
+                <th># Pedido</th>
+                <th>Fecha</th>
+                <th>Total</th>
+                <th>Método Pago</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var v in Model)
+            {
+                <tr>
+                    <td>@v.ID_venta</td>
+                    <td>@v.ID_Pedido</td>
+                    <td>@v.Fecha_Venta.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>$@v.Total.ToString("N2")</td>
+                    <td>@v.MetodoPago</td>
+                    <td>
+                        <span class="badge @(v.Estado == "Completada" ? "badge-success" : "badge-warning")">
+                            @v.Estado
+                        </span>
+                    </td>
+                    <td>
+                        <a class="btn-view" href="@Url.Action("Detalle", "Venta", new { id = v.ID_venta })">
+                            Ver
+                        </a>
+@*                         <a class="btn-danger" href="@Url.Action("Eliminar", "Venta", new { id = v.ID_venta })">
+                            Eliminar
+                        </a> *@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

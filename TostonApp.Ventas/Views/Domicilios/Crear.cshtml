@@ -1,0 +1,95 @@
+﻿@model TostonApp.Ventas.Models.Domicilio
+@{
+    ViewData["Title"] = "Programar Entrega";
+}
+
+<div class="main-content">
+    <div class="page-header">
+        <h1>Programar Entrega</h1>
+    </div>
+
+    <form asp-action="Crear" method="post">
+        @Html.AntiForgeryToken()
+
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="alert alert-danger">
+                <h4>Por favor, verifica los siguientes errores:</h4>
+                <ul>
+                    @foreach (var modelState in ViewData.ModelState.Values)
+                    {
+                        @foreach (var error in modelState.Errors)
+                        {
+                            <li>@error.ErrorMessage</li>
+                        }
+                    }
+                </ul>
+            </div>
+        }
+
+        <div class="form-group">
+            <label>N° Venta</label>
+            <input asp-for="ID_venta" class="form-control" placeholder="Ej: 12345" />
+            <span asp-validation-for="ID_venta" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Dirección</label>
+            <input asp-for="Direccion" class="form-control" placeholder="Ej: Calle 123 #456" />
+            <span asp-validation-for="Direccion" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Responsable</label>
+            <input asp-for="Responsable" class="form-control" placeholder="Nombre del responsable" />
+            <span asp-validation-for="Responsable" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Costo de Envío</label>
+            <input asp-for="CostoEnvio" type="number" step="0.01" class="form-control" placeholder="Ej: 10.50" />
+            <span asp-validation-for="CostoEnvio" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Estado <span class="text-danger">*</span></label>
+            <select asp-for="Estado" class="form-control">
+                <option value="">-- Seleccione un estado --</option>
+                <option value="Pendiente">Pendiente</option>
+                <option value="En Camino">En Camino</option>
+                <option value="Entregado">Entregado</option>
+                <option value="Fallido">Fallido</option>
+            </select>
+            <span asp-validation-for="Estado" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Ciudad (Opcional)</label>
+            <input asp-for="Ciudad" class="form-control" placeholder="Ej: Bello" />
+        </div>
+
+        <div class="form-group">
+            <label>Teléfono (Opcional)</label>
+            <input asp-for="Telefono" class="form-control" placeholder="Ej: 3001234567" />
+        </div>
+
+        <div class="form-group">
+            <label>Observaciones (Opcional)</label>
+            <textarea asp-for="Observaciones" class="form-control" rows="3" placeholder="Notas adicionales..."></textarea>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn-success">
+                <i class="fas fa-save"></i> Guardar
+            </button>
+            <a asp-action="Index" class="btn-secondary">
+                <i class="fas fa-times"></i> Cancelar
+            </a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+}

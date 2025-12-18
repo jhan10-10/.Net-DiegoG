@@ -1,0 +1,66 @@
+﻿@model List<TostonApp.Ventas.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<div class="main-content">
+    <h1>Gestión de Clientes</h1>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">@TempData["Success"]</div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+
+    <div style="display:flex; gap:10px; margin-bottom:16px;">
+        <a class="btn-success" href="@Url.Action("Crear", "Usuario")">
+            <i class="fa-solid fa-user-plus"></i> Nuevo Cliente
+        </a>
+    </div>
+
+    @if (Model.Count == 0)
+    {
+        <div class="alert alert-info">
+            <i class="fa-solid fa-info-circle"></i> No hay clientes registrados.
+        </div>
+    }
+    else
+    {
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Cédula</th>
+                    <th>Nombre Completo</th>
+                    <th>Correo Electrónico</th>
+                    <th style="text-align:center;">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var usuario in Model)
+                {
+                    <tr>
+                        <td>@usuario.Cedula</td>
+                        <td>@usuario.Nombre @usuario.Apellido</td>
+                        <td>@(string.IsNullOrWhiteSpace(usuario.Correo_Electronico) ? "-" : usuario.Correo_Electronico)</td>
+                        <td style="text-align:center;">
+                            
+                          
+                            <a class="btn-danger" href="@Url.Action("Eliminar", "Usuario", new { id = usuario.ID_Usuario })">
+                                <i class="fa-solid fa-trash"></i> Eliminar
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div style="margin-top:16px;">
+            <p style="color:#666;">Total de clientes: <strong>@Model.Count</strong></p>
+        </div>
+    }
+</div>

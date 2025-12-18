@@ -1,0 +1,21 @@
+﻿@model TostonApp.Ventas.Models.Devolucion
+
+@{
+    ViewData["Title"] = "Eliminar Devolución";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main-content">
+    <h1>¿Eliminar Devolución?</h1>
+    <p><strong>Devolución N°:</strong> @Model.ID_devolucion</p>
+    <p><strong>Venta N°:</strong> @Model.ID_venta</p>
+    <p><strong>Fecha:</strong> @Model.Fecha.ToString("dd/MM/yyyy")</p>
+    <p><strong>Motivo:</strong> @Model.Motivo</p>
+    <p><strong>Monto:</strong> $@Model.MontoDevolucion.ToString("N2")</p>
+    <p><strong>Estado:</strong> @Model.Estado</p>
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" name="id" value="@Model.ID_devolucion" />
+        <button type="submit" class="btn-danger">Eliminar</button>
+        <a class="btn-secondary" href="@Url.Action("Index", "Devoluciones")">Cancelar</a>
+    </form>
+</div>

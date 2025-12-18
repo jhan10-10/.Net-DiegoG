@@ -1,0 +1,25 @@
+﻿@model TostonApp.Ventas.Models.Domicilio
+@{
+    ViewData["Title"] = "Detalles de Entrega";
+}
+
+<div class="main-content">
+    <div class="page-header">
+        <h1>Detalles de Entrega</h1>
+    </div>
+
+    <div class="info-card">
+        <p><strong>N° Entrega:</strong> @Model.ID_entrega</p>
+        <p><strong>N° Venta:</strong> @Model.ID_venta</p>
+        <p><strong>Fecha:</strong> @Model.Fecha.ToString("dd/MM/yyyy")</p>
+        <p><strong>Dirección:</strong> @Model.Direccion</p>
+        <p><strong>Ciudad:</strong> @Model.Ciudad</p>
+        <p><strong>Responsable:</strong> @Model.Responsable</p>
+        <p><strong>Teléfono:</strong> @Model.Telefono</p>
+        <p><strong>Costo Envío:</strong> $@Model.CostoEnvio</p>
+        <p><strong>Estado:</strong> @Model.Estado</p>
+        <p><strong>Observaciones:</strong> @Model.Observaciones</p>
+    </div>
+
+    <a href="/Domicilios" class="btn-secondary">Volver</a>
+</div>

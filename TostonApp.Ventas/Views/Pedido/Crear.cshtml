@@ -1,0 +1,49 @@
+﻿@model TostonApp.Ventas.Models.Pedido
+@{
+    ViewData["Title"] = "Crear Pedido";
+}
+
+<div class="main-content">
+    <h1>Crear Pedido</h1>
+
+    <form asp-action="Crear" method="post">
+
+        <div>
+            <label>Cédula</label>
+            <input asp-for="Cedula" class="form-control" />
+        </div>
+
+        <div>
+            <label>Fecha</label>
+            <input asp-for="Fecha" type="date" class="form-control" />
+        </div>
+
+        <div>
+            <label>Total</label>
+            <input asp-for="Total" type="number" step="0.01" class="form-control" />
+        </div>
+
+        <div>
+            <label>Estado</label>
+            <select asp-for="Estado" class="form-control">
+                <option>Pendiente</option>
+                <option>En Proceso</option>
+                <option>Completado</option>
+                <option>Cancelado</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Observaciones</label>
+            <textarea asp-for="Observaciones" class="form-control"></textarea>
+        </div>
+
+        <div>
+            <label>ID Usuario</label>
+            <input asp-for="ID_Pedido" type="number" class="form-control" />
+        </div>
+
+        <button class="btn-success" type="submit">Guardar</button>
+        <a href="/Pedido" class="btn-secondary">Cancelar</a>
+    </form>
+</div>

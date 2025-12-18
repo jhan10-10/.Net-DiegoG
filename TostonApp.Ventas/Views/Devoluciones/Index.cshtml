@@ -1,0 +1,254 @@
+﻿@model IEnumerable<TostonApp.Ventas.Models.Devolucion>
+
+@{
+    ViewData["Title"] = "Gestión de Devoluciones";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-header">
+    <h1>Gestión de Devoluciones</h1>
+</div>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        <strong>¡Éxito!</strong> @TempData["Success"]
+    </div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">
+        <strong>Error:</strong> @TempData["Error"]
+    </div>
+}
+
+<div class="search-section">
+    <div class="search-bar">
+        <label>Buscar devolución</label>
+        <input type="text" id="searchInput" placeholder="escribe aquí ........" />
+        <button class="btn-primary" onclick="buscar()">Buscar</button>
+    </div>
+
+    <div class="filters">
+        <label>Filtros ▽:</label>
+        <select id="filtroEstado" class="filter-select" onchange="filtrar()">
+            <option value="">Estado ↓</option>
+            <option value="Aprobada">Aprobada</option>
+            <option value="Rechazada">Rechazada</option>
+            <option value="Pendiente">Pendiente</option>
+        </select>
+        <input type="date" id="filtroFecha" class="filter-date" onchange="filtrar()" />
+        <button class="btn-secondary" onclick="limpiarFiltros()">Limpiar Filtros ▽</button>
+    </div>
+</div>
+
+<div class="action-section">
+    <button class="btn-success" onclick="location.href='@Url.Action("Crear", "Devoluciones")'">
+        <i class="fas fa-plus"></i> Registrar Devolución
+    </button>
+</div>
+
+<div class="table-container">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>N° Devolución</th>
+                <th>N° Venta</th>
+                <th>Fecha</th>
+                <th>Motivo</th>
+                <th>Monto</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tablaDevoluciones">
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var devolucion in Model)
+                {
+                    <tr data-fecha="@devolucion.Fecha.ToString("yyyy-MM-dd")">
+                        <td>@devolucion.ID_devolucion.ToString("000000")</td>
+                        <td>@devolucion.ID_venta.ToString("000000")</td>
+                        <td>@devolucion.Fecha.ToString("dd/MM/yyyy")</td>
+                        <td>@devolucion.Motivo</td>
+                        <td>$@devolucion.MontoDevolucion.ToString("N2")</td>
+                        <td>
+                            <span class="badge badge-@ObtenerClaseEstado(devolucion.Estado)">
+                                @devolucion.Estado
+                            </span>
+                        </td>
+                        <td class="action-buttons">
+                            <button class="btn-toggle"
+                                    onclick="toggleEstado(@devolucion.ID_devolucion, @devolucion.Activo.ToString().ToLower())"
+                                    title="@(devolucion.Activo ? "Desactivar" : "Activar")">
+                                <i class="fas fa-toggle-@(devolucion.Activo ? "on" : "off")"></i>
+                            </button>
+                            <button class="btn-view"
+                                    onclick="window.location.href='@Url.Action("Detalle", "Devoluciones", new { id = devolucion.ID_devolucion })'"
+                                    title="Ver detalle">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn-edit"
+                                    onclick="window.location.href='@Url.Action("Editar", "Devoluciones", new { id = devolucion.ID_devolucion })'"
+                                    title="Editar">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn-delete"
+                                    onclick="window.location.href='@Url.Action("Eliminar", "Devoluciones", new { id = devolucion.ID_devolucion })'"
+                                    title="Eliminar">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="7" class="text-center">No hay devoluciones registradas</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="pagination">
+    <button class="btn-pagination" onclick="cambiarPagina('prev')">←</button>
+    <span class="page-numbers">
+        <button class="page-btn active" onclick="irAPagina(1)">1</button>
+        <button class="page-btn" onclick="irAPagina(2)">2</button>
+        <button class="page-btn" onclick="irAPagina(3)">3</button>
+        <span>......</span>
+    </span>
+    <span class="page-info">Página 1</span>
+    <button class="btn-pagination" onclick="cambiarPagina('next')">→</button>
+</div>
+
+@section Scripts {
+    <script>
+        let paginaActual = 1;
+
+        function buscar() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toUpperCase();
+            const table = document.getElementById('tablaDevoluciones');
+            const rows = table.getElementsByTagName('tr');
+
+            for (let i = 0; i < rows.length; i++) {
+                const row = rows[i];
+                const text = row.textContent || row.innerText;
+
+                if (text.toUpperCase().indexOf(filter) > -1) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            }
+        }
+
+        function filtrar() {
+            const estadoFiltro = document.getElementById('filtroEstado').value;
+            const fechaFiltro = document.getElementById('filtroFecha').value;
+            const table = document.getElementById('tablaDevoluciones');
+            const rows = table.getElementsByTagName('tr');
+
+            for (let i = 0; i < rows.length; i++) {
+                const row = rows[i];
+                let mostrar = true;
+
+                if (estadoFiltro) {
+                    const estadoBadge = row.querySelector('.badge');
+                    if (estadoBadge && !estadoBadge.textContent.trim().includes(estadoFiltro)) {
+                        mostrar = false;
+                    }
+                }
+
+                if (fechaFiltro && mostrar) {
+                    const fechaRow = row.getAttribute('data-fecha');
+                    if (fechaRow && fechaRow !== fechaFiltro) {
+                        mostrar = false;
+                    }
+                }
+
+                row.style.display = mostrar ? '' : 'none';
+            }
+        }
+
+        function limpiarFiltros() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('filtroEstado').value = '';
+            document.getElementById('filtroFecha').value = '';
+
+            const table = document.getElementById('tablaDevoluciones');
+            const rows = table.getElementsByTagName('tr');
+            for (let i = 0; i < rows.length; i++) {
+                rows[i].style.display = '';
+            }
+        }
+
+        function toggleEstado(id, activo) {
+            const accion = activo ? 'desactivar' : 'activar';
+            if (confirm(`¿Está seguro de ${accion} esta devolución?`)) {
+                fetch(`/Devoluciones/ToggleEstado/${id}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        location.reload();
+                    } else {
+                        alert('Error al cambiar el estado: ' + data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error al procesar la solicitud');
+                });
+            }
+        }
+
+        function cambiarPagina(direccion) {
+            if (direccion === 'prev' && paginaActual > 1) {
+                paginaActual--;
+            } else if (direccion === 'next') {
+                paginaActual++;
+            }
+            actualizarPaginacion();
+        }
+
+        function irAPagina(numero) {
+            paginaActual = numero;
+            actualizarPaginacion();
+        }
+
+        function actualizarPaginacion() {
+            document.querySelector('.page-info').textContent = `Página ${paginaActual}`;
+
+            const botones = document.querySelectorAll('.page-btn');
+            botones.forEach((btn, index) => {
+                btn.classList.toggle('active', (index + 1) === paginaActual);
+            });
+        }
+
+        document.getElementById('searchInput').addEventListener('keyup', buscar);
+    </script>
+}
+
+@functions {
+    string ObtenerClaseEstado(string estado)
+    {
+        if (string.IsNullOrEmpty(estado)) return "secondary";
+
+        return estado switch
+        {
+            "Aprobada" => "success",
+            "Rechazada" => "danger",
+            "Pendiente" => "warning",
+            _ => "secondary"
+        };
+    }
+}

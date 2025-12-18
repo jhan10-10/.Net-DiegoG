@@ -1,0 +1,93 @@
+﻿@model TostonApp.Ventas.Models.Venta
+@{
+    ViewData["Title"] = "Editar Venta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-header">
+    <h1>Editar Venta #@Model.ID_venta</h1>
+</div>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        <strong>Error:</strong> Corrija los siguientes errores:
+        <ul style="margin: 0.5rem 0 0 1.5rem;">
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
+
+<form asp-controller="Venta" asp-action="Editar" asp-route-id="@Model.ID_venta" method="post" class="form-container">
+    @Html.AntiForgeryToken()
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <input type="hidden" asp-for="ID_venta" />
+    <input type="hidden" asp-for="Fecha_Venta" />
+    <input type="hidden" asp-for="Activo" />
+
+    <div class="form-group">
+        <label asp-for="ID_Pedido">Pedido Asociado</label>
+        <select asp-for="ID_Pedido" class="form-control">
+            <option value="">-- Venta Directa --</option>
+            @if (ViewBag.Pedidos != null)
+            {
+                foreach (var pedido in ViewBag.Pedidos)
+                {
+                    <option value="@pedido.ID_Pedido" selected="@(Model.ID_Pedido == pedido.ID_Pedido)">
+                        Pedido #@pedido.ID_Pedido - Cédula: @pedido.Cedula - Total: $@pedido.Total.ToString("N2")
+                    </option>
+                }
+            }
+        </select>
+        <span asp-validation-for="ID_Pedido" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Total">Total</label>
+        <input asp-for="Total" type="number" step="0.01" class="form-control" required />
+        <span asp-validation-for="Total" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MetodoPago">Método de Pago</label>
+        <select asp-for="MetodoPago" class="form-control">
+            <option value="">-- Seleccione --</option>
+            <option value="Efectivo">Efectivo</option>
+            <option value="Tarjeta">Tarjeta</option>
+            <option value="Transferencia">Transferencia</option>
+            <option value="Nequi">Nequi</option>
+            <option value="Daviplata">Daviplata</option>
+        </select>
+        <span asp-validation-for="MetodoPago" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Estado">Estado</label>
+        <select asp-for="Estado" class="form-control" required>
+            <option value="Completada">Completada</option>
+            <option value="Pendiente">Pendiente</option>
+            <option value="Cancelada">Cancelada</option>
+        </select>
+        <span asp-validation-for="Estado" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Observaciones">Observaciones</label>
+        <textarea asp-for="Observaciones" class="form-control" rows="4"></textarea>
+        <span asp-validation-for="Observaciones" class="text-danger"></span>
+    </div>
+
+    <div class="form-actions">
+        <button type="submit" class="btn-success">Guardar Cambios</button>
+        <a href="@Url.Action("Detalle", "Venta", new { id = Model.ID_venta })" class="btn-secondary">Cancelar</a>
+    </div>
+</form>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
+}

@@ -1,0 +1,63 @@
+﻿@model TostonApp.Ventas.Models.Usuario
+
+@{
+    ViewData["Title"] = "Eliminar Cliente";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card border-danger">
+                <div class="card-header bg-danger text-white">
+                    <h4 class="mb-0"><i class="bi bi-exclamation-triangle"></i> Eliminar Cliente</h4>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-warning">
+                        <i class="bi bi-info-circle"></i> ¿Está seguro de que desea desactivar este cliente?
+                    </div>
+
+                    <dl class="row">
+                        <dt class="col-sm-4">Cédula:</dt>
+                        <dd class="col-sm-8">@Model.Cedula</dd>
+
+                        <dt class="col-sm-4">Nombre:</dt>
+                        <dd class="col-sm-8">@Model.Nombre @Model.Apellido</dd>
+
+                        <dt class="col-sm-4">Correo:</dt>
+                        <dd class="col-sm-8">@(string.IsNullOrWhiteSpace(Model.Correo_Electronico) ? "No registrado" : Model.Correo_Electronico)</dd>
+
+                        @if (Model.Pedidos != null && Model.Pedidos.Count > 0)
+                        {
+                            <dt class="col-sm-4">Pedidos:</dt>
+                            <dd class="col-sm-8">
+                                <span class="badge bg-info">@Model.Pedidos.Count pedido(s) registrado(s)</span>
+                            </dd>
+                        }
+                    </dl>
+
+                    @if (Model.Pedidos != null && Model.Pedidos.Count > 0)
+                    {
+                        <div class="alert alert-info">
+                            <i class="bi bi-info-circle"></i>
+                            <strong>Nota:</strong> Este cliente tiene pedidos registrados. Al desactivarlo,
+                            no se eliminarán sus pedidos pero no podrá realizar nuevos pedidos.
+                        </div>
+                    }
+
+                    <form asp-action="EliminarConfirmado" method="post">
+                        <input type="hidden" name="id" value="@Model.ID_Usuario" />
+
+                        <div class="d-flex justify-content-between mt-4">
+                            <a asp-action="Index" class="btn btn-secondary">
+                                <i class="bi bi-arrow-left"></i> Cancelar
+                            </a>
+                            <button type="submit" class="btn btn-danger">
+                                <i class="bi bi-trash"></i> Confirmar Eliminación
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

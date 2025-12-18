@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Generar Venta";
+    var pedido = ViewBag.Pedido as TostonApp.Ventas.Models.Pedido;
+}
+
+<div class="main-content">
+    <h1>Generar Venta desde Pedido</h1>
+
+    <div class="card">
+        <p><strong>Pedido:</strong> #@pedido.ID_Pedido</p>
+        <p><strong>Fecha:</strong> @pedido.Fecha.ToString("dd/MM/yyyy")</p>
+        <p><strong>Total:</strong> $@pedido.Total.ToString("N2")</p>
+        <p><strong>Estado:</strong> @pedido.Estado</p>
+    </div>
+
+    <h3>Productos</h3>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var d in pedido.Detalles)
+            {
+                <tr>
+                    <td>@d.Producto.Nombre</td>
+                    <td>@d.Cantidad</td>
+                    <td>$@d.PrecioUnitario.ToString("N2")</td>
+                    <td>$@d.Subtotal.ToString("N2")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <form asp-action="GenerarDesdePedido" asp-route-id="@pedido.ID_Pedido" method="post">
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            <label>Método de Pago *</label>
+            <select name="metodoPago" class="form-control" required>
+                <option value="">-- Seleccione --</option>
+                <option>Efectivo</option>
+                <option>Tarjeta</option>
+                <option>Transferencia</option>
+                <option>Nequi</option>
+                <option>Daviplata</option>
+            </select>
+        </div>
+
+        <button class="btn-success">Confirmar Venta</button>
+        <a class="btn-secondary" href="@Url.Action("Detalle", "Pedido", new { id = pedido.ID_Pedido })">
+            Cancelar
+        </a>
+    </form>
+</div>

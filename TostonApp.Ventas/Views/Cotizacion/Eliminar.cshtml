@@ -1,0 +1,21 @@
+﻿@model TostonApp.Ventas.Models.Cotizacion
+
+@{
+    ViewData["Title"] = "Eliminar Cotización";
+}
+
+<div class="main-content">
+    <h1>Eliminar Cotización</h1>
+
+    <p>¿Estás seguro de que deseas eliminar esta cotización?</p>
+
+    <p>
+        <strong>N° @Model.NumeroCotizacion — Cliente: @Model.Cliente</strong>
+    </p>
+
+    <form asp-action="EliminarPost" method="post" asp-route-id="@Model.ID_Cotizacion">
+        <button class="btn-danger">Eliminar</button>
+        <a class="btn-secondary" href="/Cotizacion">Cancelar</a>
+    </form>
+
+</div>
